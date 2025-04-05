@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E40AF"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    
+    <!-- Pattern for background -->
+    <pattern id="grid-pattern" width="50" height="50" patternUnits="userSpaceOnUse">
+      <rect width="50" height="50" fill="none"/>
+      <circle cx="25" cy="25" r="1" fill="#3B82F6" opacity="0.2"/>
+    </pattern>
+  </defs>
+  
+  <!-- Main background -->
+  <rect width="800" height="600" fill="url(#bg-gradient)"/>
+  
+  <!-- Background pattern -->
+  <rect width="800" height="600" fill="url(#grid-pattern)"/>
+  
+  <!-- Abstract shapes representing banking/digital elements -->
+  <g opacity="0.7">
+    <!-- Digital banking elements -->
+    <g transform="translate(100, 150) rotate(-15)">
+      <rect x="0" y="0" width="120" height="80" rx="10" fill="#3B82F6" opacity="0.6"/>
+      <rect x="20" y="25" width="80" height="10" fill="white" opacity="0.7"/>
+      <rect x="20" y="45" width="60" height="5" fill="white" opacity="0.5"/>
+      <rect x="20" y="55" width="40" height="5" fill="white" opacity="0.5"/>
+    </g>
+    
+    <!-- Mobile device -->
+    <g transform="translate(600, 200) rotate(15)">
+      <rect x="0" y="0" width="60" height="120" rx="10" fill="#4F46E5" opacity="0.6"/>
+      <rect x="5" y="5" width="50" height="90" rx="5" fill="#0F172A" opacity="0.7"/>
+      <circle cx="30" cy="110" r="8" fill="#334155"/>
+    </g>
+    
+    <!-- Rupee symbol -->
+    <g transform="translate(400, 350)">
+      <circle cx="0" cy="0" r="70" fill="#7C3AED" opacity="0.3"/>
+      <text x="0" y="25" font-family="Arial" font-size="80" fill="white" opacity="0.2" text-anchor="middle">₹</text>
+    </g>
+    
+    <!-- Data flow lines -->
+    <path d="M150,300 C250,250 350,400 450,350 S650,250 750,300" stroke="#3B82F6" stroke-width="2" opacity="0.3" fill="none"/>
+    <path d="M50,200 C150,150 250,300 350,250 S550,150 650,200" stroke="#3B82F6" stroke-width="2" opacity="0.3" fill="none"/>
+    <path d="M100,400 C200,350 300,500 400,450 S600,350 700,400" stroke="#3B82F6" stroke-width="2" opacity="0.3" fill="none"/>
+  </g>
+  
+  <!-- Connection points -->
+  <g>
+    <circle cx="100" cy="100" r="3" fill="#38BDF8" opacity="0.7"/>
+    <circle cx="300" cy="200" r="3" fill="#38BDF8" opacity="0.7"/>
+    <circle cx="500" cy="150" r="3" fill="#38BDF8" opacity="0.7"/>
+    <circle cx="700" cy="300" r="3" fill="#38BDF8" opacity="0.7"/>
+    <circle cx="200" cy="400" r="3" fill="#38BDF8" opacity="0.7"/>
+    <circle cx="400" cy="300" r="3" fill="#38BDF8" opacity="0.7"/>
+    <circle cx="600" cy="450" r="3" fill="#38BDF8" opacity="0.7"/>
+    <circle cx="150" cy="500" r="3" fill="#38BDF8" opacity="0.7"/>
+    <circle cx="350" cy="550" r="3" fill="#38BDF8" opacity="0.7"/>
+    <circle cx="650" cy="100" r="3" fill="#38BDF8" opacity="0.7"/>
+  </g>
+  
+  <!-- Subtle particle effect -->
+  <g>
+    <circle cx="250" cy="150" r="1" fill="white" opacity="0.5"/>
+    <circle cx="450" cy="250" r="1" fill="white" opacity="0.5"/>
+    <circle cx="350" cy="350" r="1" fill="white" opacity="0.5"/>
+    <circle cx="550" cy="450" r="1" fill="white" opacity="0.5"/>
+    <circle cx="650" cy="350" r="1" fill="white" opacity="0.5"/>
+    <circle cx="750" cy="250" r="1" fill="white" opacity="0.5"/>
+    <circle cx="150" cy="250" r="1" fill="white" opacity="0.5"/>
+    <circle cx="50" cy="350" r="1" fill="white" opacity="0.5"/>
+    <circle cx="250" cy="550" r="1" fill="white" opacity="0.5"/>
+    <circle cx="450" cy="50" r="1" fill="white" opacity="0.5"/>
+  </g>
+</svg> 

@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# AWS Amplify
+aws-exports.js
+.amplify
+.amplify-hosting
+amplify/#current-cloud-backend

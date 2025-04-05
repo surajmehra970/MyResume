@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E40AF"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Main background -->
+  <rect width="800" height="400" fill="url(#bg-gradient)"/>
+  
+  <!-- Abstract app framework/grid pattern -->
+  <g stroke="#4B5563" stroke-width="1" opacity="0.2">
+    <path d="M100,50 L100,350" />
+    <path d="M250,50 L250,350" />
+    <path d="M400,50 L400,350" />
+    <path d="M550,50 L550,350" />
+    <path d="M700,50 L700,350" />
+    <path d="M50,100 L750,100" />
+    <path d="M50,200 L750,200" />
+    <path d="M50,300 L750,300" />
+  </g>
+  
+  <!-- Application management elements -->
+  <g>
+    <!-- Control panel -->
+    <rect x="120" y="120" width="180" height="160" rx="10" fill="#3B82F6" opacity="0.8"/>
+    <rect x="130" y="130" width="160" height="30" rx="5" fill="#1D4ED8" opacity="0.9"/>
+    <circle cx="145" cy="145" r="5" fill="#EF4444"/>
+    <circle cx="165" cy="145" r="5" fill="#F59E0B"/>
+    <circle cx="185" cy="145" r="5" fill="#10B981"/>
+    
+    <!-- Controls -->
+    <rect x="145" y="180" width="130" height="10" rx="5" fill="white" opacity="0.6"/>
+    <rect x="145" y="200" width="80" height="10" rx="5" fill="white" opacity="0.6"/>
+    <rect x="145" y="220" width="110" height="10" rx="5" fill="white" opacity="0.6"/>
+    <circle cx="145" cy="250" r="12" fill="#0EA5E9"/>
+    <circle cx="175" cy="250" r="12" fill="#8B5CF6"/>
+    <circle cx="205" cy="250" r="12" fill="#F43F5E"/>
+  </g>
+  
+  <!-- Monitoring dashboard -->
+  <g>
+    <rect x="350" y="120" width="350" height="160" rx="10" fill="#475569" opacity="0.8"/>
+    <rect x="360" y="130" width="330" height="30" rx="5" fill="#334155" opacity="0.9"/>
+    <text x="380" y="150" font-family="Arial" font-size="14" fill="white">Application Monitoring Dashboard</text>
+    
+    <!-- Chart elements -->
+    <rect x="370" y="170" width="150" height="100" rx="5" fill="#0F172A" opacity="0.7"/>
+    <path d="M380,250 L400,220 L420,235 L440,190 L460,210 L480,180 L500,225" stroke="#10B981" stroke-width="2" fill="none"/>
+    
+    <!-- Metrics -->
+    <rect x="530" y="170" width="150" height="45" rx="5" fill="#0F172A" opacity="0.7"/>
+    <text x="545" y="190" font-family="Arial" font-size="12" fill="white">Server Status:</text>
+    <circle cx="650" cy="190" r="8" fill="#22C55E"/>
+    
+    <rect x="530" y="225" width="150" height="45" rx="5" fill="#0F172A" opacity="0.7"/>
+    <text x="545" y="245" font-family="Arial" font-size="12" fill="white">Uptime:</text>
+    <text x="630" y="245" font-family="Arial" font-size="12" fill="white">99.9%</text>
+  </g>
+  
+  <!-- Connection lines -->
+  <path d="M300,200 C330,200 330,180 350,180" stroke="#3B82F6" stroke-width="2" fill="none"/>
+  <path d="M300,220 C330,220 330,240 350,240" stroke="#3B82F6" stroke-width="2" fill="none"/>
+</svg> 

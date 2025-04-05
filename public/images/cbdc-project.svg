@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <rect width="200" height="200" fill="#E6F7FF" />
+  <circle cx="100" cy="100" r="70" fill="#1890FF" />
+  <text x="100" y="110" font-family="Arial" font-size="24" fill="white" text-anchor="middle">Digital Rupee</text>
+  <path d="M100 50 L100 75 M80 65 L120 65" stroke="white" stroke-width="5" />
+  <path d="M90 140 C90 125, 110 125, 110 140" stroke="white" stroke-width="3" fill="none" />
+</svg> 

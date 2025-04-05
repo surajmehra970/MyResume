@@ -1,4 +1,109 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Suraj Mehra - Resume Website
+
+A modern, responsive resume website built with Next.js and TailwindCSS.
+
+## Deployment Guide - AWS Amplify
+
+This guide will walk you through deploying this Next.js application to AWS Amplify, which provides a simple and efficient hosting solution with continuous deployment.
+
+### Prerequisites
+
+- An AWS account
+- GitHub/GitLab/BitBucket repository with your code
+- Node.js and npm installed locally
+
+### Step 1: Prepare Your Repository
+
+Make sure your code is pushed to a GitHub, GitLab, or BitBucket repository.
+
+### Step 2: Set Up AWS Amplify
+
+1. Log in to the [AWS Management Console](https://aws.amazon.com/console/)
+2. Search for "Amplify" and select the service
+3. Click "New app" or "Create app" on the Amplify Console
+4. Choose "Host web app"
+5. Select your repository provider (GitHub, GitLab, BitBucket)
+6. Follow the prompts to authorize AWS Amplify to access your repositories
+7. Select the repository and branch you want to deploy
+
+### Step 3: Configure Build Settings
+
+AWS Amplify will automatically detect that your project is a Next.js application, but you may need to configure the build settings.
+
+In the build settings page, use the following configuration:
+
+```yaml
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - npm ci
+    build:
+      commands:
+        - npm run build
+  artifacts:
+    baseDirectory: .next
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - node_modules/**/*
+```
+
+### Step 4: Advanced Settings (Optional)
+
+You can configure environment variables if needed:
+
+1. In the Amplify console, go to "App settings" > "Environment variables"
+2. Add any environment variables your application needs
+
+### Step 5: Deploy
+
+Click "Save and deploy" to start the deployment process. AWS Amplify will:
+
+1. Clone your repository
+2. Run the build commands
+3. Deploy your application to their global CDN
+
+### Step 6: Set Up a Custom Domain (Optional)
+
+After deployment, you can set up a custom domain:
+
+1. In the Amplify console, go to "App settings" > "Domain management"
+2. Click "Add domain"
+3. Follow the instructions to configure your domain with AWS Amplify
+
+### Continuous Deployment
+
+Once set up, AWS Amplify will automatically redeploy your application whenever you push changes to the configured branch.
+
+## Local Development
+
+To run the project locally:
+
+```bash
+# Install dependencies
+npm install
+
+# Run the development server
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
+
+## Project Structure
+
+- `/src/components`: React components
+- `/src/app`: Next.js app router pages
+- `/public`: Static assets like images
+
+## Technologies Used
+
+- Next.js
+- React
+- TailwindCSS
+- TypeScript
 
 ## Getting Started
 
