@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { useSpring, animated } from '@react-spring/three';
 import { OrbitControls } from '@react-three/drei';
@@ -12,13 +12,18 @@ function AchievementCard3D({ position, rotation, achievement, index }: any) {
   const mesh = useRef<THREE.Group>(null);
   const [hovered, setHovered] = useState(false);
   const [active, setActive] = useState(false);
+  const [z, setZ] = useState(0);
   
-  // Animation with react-spring
-  const { scale, positionZ } = useSpring({
+  // Animation with react-spring using primitive values instead of spring values for position
+  const { scale } = useSpring({
     scale: active ? 1.1 : hovered ? 1.05 : 1,
-    positionZ: active ? 1 : 0,
     config: { mass: 1, tension: 170, friction: 26 }
   });
+  
+  // Set Z position based on active state
+  useEffect(() => {
+    setZ(active ? 1 : 0);
+  }, [active]);
   
   // Subtle floating animation
   useFrame((state) => {
@@ -30,7 +35,7 @@ function AchievementCard3D({ position, rotation, achievement, index }: any) {
   return (
     <animated.group 
       ref={mesh}
-      position={[position[0], position[1], positionZ.to(z => z)]}
+      position={[position[0], position[1], z]}
       rotation={rotation}
       scale={scale}
       onClick={() => setActive(!active)}
