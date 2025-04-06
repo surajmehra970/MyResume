@@ -5,12 +5,10 @@ import Skills from '../components/Skills';
 import Achievements from '../components/Achievements';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
-import TailwindTest from '../components/TailwindTest';
 
 export default function Home() {
   return (
     <main className="min-h-screen">
-      <TailwindTest />
       <Header />
       <About />
       <Experience />

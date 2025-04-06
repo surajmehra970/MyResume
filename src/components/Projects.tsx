@@ -30,7 +30,7 @@ function AchievementCard3D({ position, rotation, achievement, index }: any) {
   return (
     <animated.group 
       ref={mesh}
-      position={[position[0], position[1], positionZ]}
+      position={[position[0], position[1], positionZ.to(z => z)]}
       rotation={rotation}
       scale={scale}
       onClick={() => setActive(!active)}
